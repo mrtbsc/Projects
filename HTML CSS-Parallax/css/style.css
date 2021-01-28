@@ -1,0 +1,147 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.parallax {
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Other effects for the background images */
+    opacity: 0.7;
+    position: relative;
+    }
+
+/*** TITLE PART***/
+.img-town {
+    background-image: url("../images/Town.jpg");
+}
+
+h1 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 48px;
+    font-weight: normal;
+    color: gray;
+    letter-spacing: 5px;
+    margin-top: 0px;
+    position: absolute;
+    top: 46%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+span {
+    background-color: white;
+    border: 5px solid gray;
+    padding: 7px 15px;
+    opacity: .8;
+}
+
+h1 br {
+    display: none;
+}
+/*** END OF TITLE PART ***/
+
+
+section {
+    font-size: 20.5px;
+    padding: 50px;
+    margin: 0;
+    background-color: #282E34;
+}
+
+h3 {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 539;
+    margin-top: 0;
+    text-align: center;
+    color: whitesmoke;
+}
+
+section.dark {
+    color: gray;
+}
+
+.dark h3 {
+    color: rgb(185, 185, 167);
+}
+
+h2 {
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 11px;
+    margin-top: 0px;
+    position: absolute;
+    top: 37%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 56px;
+    font-weight: normal;
+}   
+
+#img-museum {
+    background-image: url("../images/Museum.jpg");
+    height: 40%;
+}
+
+section:nth-of-type(2) {
+    background-color: rgb(207, 199, 147);
+}
+
+#img-lake {
+    background-image: url("../images/BlueLake.jpg");
+    height: 55%;
+}
+
+section:nth-of-type(3) {
+    background-color: #5F92A5;
+}
+
+#img-hall {
+    background-image: url("../images/Hall.jpg");
+    height: 40%;
+}
+
+#bye-text {
+    position: relative;
+    bottom: 70%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color:#3B3838;
+}
+
+/********** Small devices adjustments **********/
+@media (max-width: 522px) {
+    h1 br {
+        display: block;
+    }
+
+    span {
+        -webkit-box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        box-decoration-break: clone;
+        display: inline-block;
+        font-size: 32px;
+    }
+
+    h1 {
+        top: 42%;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+}

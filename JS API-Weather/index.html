@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skateable weather?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+
+        #place {
+            font-size: 2em;
+            margin: 0.5em;
+        }
+
+        span {
+            border: solid gray 2px;
+            border-radius: 3%;
+            padding: 6px;
+            margin: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;  
+            background-color: palegoldenrod;       
+        }
+
+        #forecastsDiv {
+            margin-top: 8px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+</head>
+
+<body>
+    <h1>Is the weather going to let me skate?</h1>
+    <form id="searchForm">
+        <label for="city">Where do you want to skate?</label>
+        <input type="text" id="city" name="city" placeholder="Type city/town here" >
+        <button>Search</button>
+    </form>
+
+    <p id="place"></p>
+    <div id="forecastsDiv"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

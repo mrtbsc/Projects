@@ -1,0 +1,181 @@
+body {
+    background-color: rgb(224, 224, 224);
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 0;
+    text-align: center;
+}
+
+#content {
+    box-shadow: 5px -15px 40px rgb(126, 126, 126);
+    margin: 0 auto; 
+    padding-bottom: 15px;
+    width: 800px;
+}
+
+/* COMPANY PRESENTATION */
+#company-presentation {
+    background-color: white;
+    height: 100vh;
+}
+
+#company-text, 
+#company-photo-space {
+    box-sizing: border-box;
+    float: left;
+    height: 100vh;
+    width: 50%;
+}
+
+#company-text {
+    padding: 20px;
+    position: relative;
+    top: 33vh;
+    width: 40%;
+}
+
+h1 {
+    font-weight: normal;
+    margin: 0;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: grey;
+    font: normal 1.2em 'Roboto Condensed', sans-serif;
+    margin: 0 auto 30px;
+}
+
+#company-text a {
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    color: black;
+    font-size: .8em;
+    padding: 15px 35px 15px;
+    text-decoration: none;
+}
+
+#company-text a:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+#company-photo-space {
+    width: 60%;
+}
+
+#company-photo {
+    background: url('../images/MainPhotoD.jpg') no-repeat 
+    center center;
+    height: 100vh;
+}
+/* END OF COMPANY PRESENTATION */
+
+/* GALLERY */
+#photos-header {
+    background-color: rgb(53, 53, 53);
+    clear: left;
+    margin-bottom: 0;
+    padding: 12px;
+}
+
+h3 {
+    border-left: 1px dotted white;
+    border-right: 1px dotted white;
+    color: white;
+    display: inline;
+    font: normal .8em 'Roboto Condensed', sans-serif;
+    padding: 0 5px;
+}
+
+img {
+    display: block;
+    height: 400px;
+    margin: 0 auto 20px;
+    width: 800px;
+}
+
+.photo-title,
+.photo-info {
+    margin: 10px;
+}
+
+.photo-title {
+    font: bold .8em  'Roboto Condensed', sans-serif;
+}
+
+.photo-info {
+    font-size: .7em;
+    margin-bottom: 20px;
+    padding: 0 40px;
+
+}
+/* END OF GALLERY */
+
+/* FOOTER */
+footer {
+    color: rgb(53, 53, 53);
+    font-size: .6em;
+    line-height: 2em;
+    margin: 40px 0 20px;
+    }
+
+.footer-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+
+}
+footer span {
+    font-weight: bold;
+}
+/* END OF FOOTER */
+
+/********** Small devices adjustments **********/
+@media (max-width: 800px) {
+    #content,
+    img {
+        width: 100%;
+    }
+
+    img {
+        height: auto;
+    }
+
+    body {
+        margin: 0;
+    }
+}
+
+@media (max-width:650px) {
+    #company-text {
+        width: 60%;
+    }  
+
+    #company-photo-space {
+        width: 40%;
+    }
+
+}
+
+@media (max-width:570px) {
+    #company-text {
+        float: none;
+        height: 50vh;
+        top: 12%;
+        width: 100%;
+    }
+
+     #company-photo-space {
+        float: none;
+        height: 50vh;
+        overflow: hidden;
+        width: 100%;
+    }  
+
+    #company-photo {
+        background-position: center -410px;
+        height: 50vh;
+        width: 100%;
+    }
+
+}

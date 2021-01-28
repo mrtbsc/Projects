@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Game</title>
+
+    <!-- <link rel='stylesheet' href='css/style.css'> -->
+
+    <style>
+        section {
+            border-radius: 8px;
+            max-width:400px;
+            margin: 8px auto;
+            background-color: rgb(222, 218, 218);
+            padding: 15px;
+        }
+        .item {
+            margin: 0;
+            -webkit-margin-bottom-collapse: collapse;
+            border: 2px solid rgb(58, 58, 58);
+            border-radius: 5px;
+            text-align: center;
+       
+            padding: 14px 0;
+        }
+
+        .item:hover {
+            border: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>Drag an element onto another to place it over it</h1>
+        <div class='box'><div class='item' id='i1'></div></div>
+        <div class='box'><div class='item' id='i2'></div></div>
+        <div class='box'><div class='item' id='i3'></div></div>
+        <div class='box'><div class='item' id='i4'></div></div>
+        <div class='box'><div class='item' id='i5'></div></div>
+        <div class='box'><div class='item' id='i6'></div></div>
+    </section>
+
+    <script src="./script/app.js"></script>
+</body>
+
+</html>
