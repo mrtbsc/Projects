@@ -8,6 +8,6 @@ The idea came from the very helpful page https://www.geeksforgeeks.org/top-10-pr
 It is finished, but some improvements might be added in the future.
 
 ## Possible future improvements
-Images could be clickable to select its associated check-box, and have a hover effect.
-Improve responsiveness.
-A back-end part could be built to save the results (and also enable the users to change them if they had a change of mind).
+- Images could be clickable to select its associated check-box, and have a hover effect.
+- Improve responsiveness.
+- A back-end part could be built to save the results (and also enable the users to change them if they had a change of mind).
