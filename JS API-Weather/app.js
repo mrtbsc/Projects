@@ -3,6 +3,9 @@ const div = document.querySelector('#forecastsDiv');
 const p = document.querySelector('#place');
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sept", "Oct", "Novr", "Dec"];
 const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const owKey = keys.OW;
+const mqKey = keys.MQ;
+
 let today = new Date();
 let yesterdayUTCSeconds = Math.floor(today.getTime()/1000 - 24*3600);
 
@@ -12,14 +15,14 @@ form.addEventListener('submit', async function (e) {
     const searchTerm = form.elements.city.value;
 
     //2. Get its coordinates
-    const config = { params: { key:'', location: searchTerm } }
-    const resCoordinates = await axios.get(`http://open.mapquestapi.com/geocoding/v1/address?`, config);
+    const config = { params: { location: searchTerm } }
+    const resCoordinates = await axios.get('http://open.mapquestapi.com/geocoding/v1/address?key='+ mqKey, config);
     const coordinates = tellCoordinates(resCoordinates);
     form.elements.city.value = '';
 
     //3. Get the forecasts for those coordinates (for next 48h + for next 7 days)
-    let configWeather = { params: {appid: '', lat: coordinates.lat ,lon: coordinates.lng}}
-    let resWeather = await axios.get('https://api.openweathermap.org/data/2.5/onecall?exclude=minutely,alerts,current&units=metric', configWeather);
+    let configWeather = { params: { lat: coordinates.lat ,lon: coordinates.lng}}
+    let resWeather = await axios.get('https://api.openweathermap.org/data/2.5/onecall?exclude=minutely,alerts,current&units=metric&appid='+ owKey, configWeather);
     const hourlyWeather = resWeather.data.hourly;
     const dailyWeather = resWeather.data.daily;
     console.dir(hourlyWeather);
@@ -34,7 +37,7 @@ form.addEventListener('submit', async function (e) {
 
     //6. Double-check the used coordinates' city/town, and print it
     //add to config appid
-    const resPlace = await axios.get('http://open.mapquestapi.com/nominatim/v1/reverse.php?format=json', configWeather);
+    const resPlace = await axios.get('http://open.mapquestapi.com/nominatim/v1/reverse.php?format=json&key='+ mqKey, configWeather);
     p.innerHTML = `${(resPlace.data.address.city||resPlace.data.address.village||resPlace.data.address.town)}, ${resPlace.data.address.country}`;
 
     //7. Get the weather from day before incase they alert current wet floor
