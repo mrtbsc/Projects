@@ -1,7 +1,13 @@
-body {
+ body {
     background-color: #ffeeba;
     font-family: 'Englebert', sans-serif;
 }
+
+/* .img-option img {
+    max-width: 100%;
+    height: auto;
+} */
+/*
 input[type=text], select, textarea {
     background-color: #ffeeba;
     font-family: 'Montserrat', sans-serif;
@@ -18,7 +24,7 @@ fieldset {
 }
 
 /* FIELDSETS WITH IMAGES */
-p {margin: 10px 0;}
+/* p {margin: 10px 0;}
 
 .clue {
     display: block;
@@ -29,18 +35,16 @@ p {margin: 10px 0;}
     display: inline-block;
     margin-bottom: 15px;}
 
-img {
-    border-radius: 8px;
-    display: block;
+img {;
     height: 100px;
     width: 150px;    
 }
 
 .group-other{ margin-top: 10px; }
-
+ */
 
 /* FOOD TO AVOID */
-.group-allergies { 
+/* .group-allergies { 
     margin-top: 8px; 
     margin-bottom: 4px;
 }
@@ -48,10 +52,10 @@ img {
 #other-nos {
     display: inline-block;
     width: 350px;
-}
+} */
 
 /* LOCATION */
-input[type=radio] {
+/* input[type=radio] {
     margin-left: 0px;
     float: left;
 }
@@ -69,20 +73,19 @@ textarea#host-condition {
 textarea#host-condition + div {
     float:left; 
     clear: left;
-}
+} */
 
 /* SUBMIT BUTTON */
 /* input[type=submit] {
 
 } */
-
+/* 
 #group-submit {
-    /* border: 2px solid rgb(135, 130, 127); */
     padding: 5px;
     width: 320px;
     display: block;
     margin: 5px auto;
-}
+}  */
 
 /***** For small devices *****/
 
