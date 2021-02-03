@@ -89,7 +89,7 @@ textarea#host-condition + div {
 
 /***** For small devices *****/
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
     .group-2restaurants, .group-diet , .group-2cakes{
         margin-top: 8px;
     }
@@ -119,7 +119,7 @@ textarea#host-condition + div {
         display: block;
         margin: 3px auto;
     }
-
+ */
 
 
 }

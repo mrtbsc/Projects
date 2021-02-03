@@ -15,14 +15,14 @@
     <div class="container">    
         <form>
             <!-- Food Ordering -->
-            <fieldset class="my-4 border-bottom border-secondary">
+            <fieldset class="mt-3 border-bottom border-secondary">
                 <legend>Food Ordering</legend>
                 <p>
                     Let's vote on the restaurant types we prefer! <br>
-                    <small class="clue">( Each of us can vote on several types here, and then we can easily decide on a particular resturant for the type that wins. )</small>
+                    <small>( Each of us can vote on several types here, and then we can easily decide on a particular resturant for the type that wins. )</small>
                 </p>
                 
-                <div class="row d-flex align-content-stretch">
+                <div class="row">
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                         <label for="italian">
                         <img src="images/italian-food.jpg" class="img-fluid rounded" alt="italian-food">
@@ -61,39 +61,35 @@
                     </div>
                 </div>
 
-                <div class="form-group row mb-0">
-                    <label class="col col-form-label" for="other-restaurant">
-                        Thinking of another type?
-                    </label>
-                    <div class="d-felx flex-grow-2">
-                        <input type="text" class="form-control form-control-sm" id="other-restaurant" placeholder="Suggest another restaurant here">
-                    </div>
+                <div class="mb-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <label for="other-restaurant" class="input-group-text">Thinking of another restaurant?</label>
+                        </div>
+                            <input type="text" class="form-control" id="other-restaurant" placeholder=" Suggest it here">
+                    </div>                   
                 </div>
 
-                <div class="form-group row" id="group-2restaurants">
 
-                    <div class="col">
-                        <div class="">
+                <div class="form-check mb-3" id="group-2restaurants">
+                            <input type="checkbox"  class="form-check-input" id="two-restaurants">      
                             <label for="two-restaurants" class="form-check-label">
-                                For diversity 🧡 lovers: Let's order from 2 restaurants 
-                            </label>
-                            <input type="checkbox"  class="form-check-input ml-2" id="two-restaurants">                           
-                        </div>
-
-                    </div> 
+                                Diversity 🧡 lover: Let's order from 2 restaurants
+                            </label>                        
                 </div>
             </fieldset>
+
             <!-- Avoided Food -->
-            <!-- <fieldset>
+            <fieldset class="mt-2 border-bottom border-secondary">
                 <legend>Food to avoid</legend>
-                <section class="group-allergies">
+                <section class="form-group" id="group-allergies">
                     <label for="allergies">Allergies & Intolerances</label>
-                    <input id="allergies" type="text" placeholder="Per example: Dairy">
+                    <input id="allergies" type="text" class="form-control" placeholder="Per example: Dairy">
                 </section>
 
                 <section class="group-diet">
                     <label for="diet">Diet regarding animal products</label>
-                    <select id="diet">
+                    <select class="form-control" id="diet">
                         <option value disabled selected>Select one</option>
                         <option value="vegan">Vegan</option>
                         <option value="eco">Only Free-Range/Eco</option>
@@ -103,102 +99,128 @@
                     </select>
                 </section>
                 
-                <section class="group-other">
+                <section class="form-group" id="group-other">
                     <label for="other-nos">Other food that makes you go 'uuugh'</label>
-                    <input type=text id="other-nos" name="other-nos" placeholder="Despisable food here">
+                    <input type=text id="other-nos" class="form-control" name="other-nos" placeholder="Despisable food here">
                 </section>
-            </fieldset> -->
+            </fieldset>
 
             <!-- Cake Baking -->
-            <!-- <fieldset>
+            <fieldset class="mt-2 border-bottom border-secondary">
                 <legend>Cake Baking</legend>
                 <p>
-                    Let's vote on the cakes we would like to bake !
-                    <span class="clue">( Each of us can vote on several cakes, but we shall only bake the one that has more votes. )</span> 
+                    Let's vote on the cakes we would like to bake ! <br>
+                    <small>( Each of us can vote on several cakes, but we shall only bake the one that has more votes. )</small> 
                 </p>
-                <section class="group-options">
-                    <div class="img-option">
-                        <img src="images/carrot-cake.jpg" alt="carrot-cake">
-                        <input type="checkbox" id="carrot-cake">
-                        <label for="carrot-cake">Carrot Cake</label>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <label for="carrot-cake">
+                            <img class="img-fluid rounded" src="images/carrot-cake.jpg" alt="carrot-cake">
+                            <input type="checkbox" id="carrot-cake">
+                            Carrot Cake
+                        </label>
                     </div>
-                    <div class="img-option">
-                        <img src="images/brownies.jpg" alt="brownies">
-                        <input type="checkbox" id="brownies">
-                        <label for="brownies">Brownies</label>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <label for="brownies">
+                            <img class="img-fluid rounded" src="images/brownies.jpg" alt="brownies">
+                            <input type="checkbox" id="brownies">
+                            Brownies
+                        </label>
                     </div>
-                    <div class="img-option">
-                        <img src="images/apple-pie.jpg" alt="apple pie">
-                        <input type="checkbox" id="apple-pie">
-                        <label for="apple-pie">Apple pie</label>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <label for="apple-pie">
+                            <img class="img-fluid rounded" src="images/apple-pie.jpg" alt="apple pie">
+                            <input type="checkbox" id="apple-pie">
+                            Apple pie
+                        </label>
                     </div>
-                    <div class="img-option">
-                        <img src="images/strawberries.jpg" alt="strawberries cake">
-                        <input type="checkbox" id="strawberries">
-                        <label for="strawberries">Strawberry cake</label>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <label for="strawberries">
+                            <img class="img-fluid rounded" src="images/strawberries.jpg" alt="strawberries cake">
+                            <input type="checkbox" id="strawberries">
+                            Strawberry cake
+                        </label>
                     </div>
-                    <div class="img-option">
-                        <img src="images/banana-cake.jpg" alt="banana cake">
-                        <input type="checkbox" id="banana-cake">
-                        <label for="banana-cake">Banana bread</label>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <label for="banana-cake">
+                            <img class="img-fluid rounded" src="images/banana-cake.jpg" alt="banana cake">
+                            <input type="checkbox" id="banana-cake">
+                            Banana bread
+                        </label>
                     </div>
-                    <div class="img-option">
-                        <img src="images/choc-mousse.jpg" alt="choc-mousse">
-                        <input type="checkbox" id="choc-mousse">
-                        <label for="choc-mousse">Chocolate mousse</label>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <label for="choc-mousse">
+                            <img class="img-fluid rounded" src="images/choc-mousse.jpg" alt="choc-mousse">
+                            <input type="checkbox" id="choc-mousse">
+                            Chocolate mousse
+                        </label>
                     </div>
-                    <div class="img-option">
-                        <img src="images/lemon-cake.jpg" alt="lemon-cake">
-                        <input type="checkbox" id="lemon-cake">
-                        <label for="lemon-cake">Lemon cake</label>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <label for="tiramisu">
+                            <img class="img-fluid rounded" src="images/tiramisu.jpg" alt="tiramisu">
+                            <input type="checkbox" id="tiramisu">
+                            Tiramisu
+                        </label>
                     </div>
-                    <div class="img-option">
-                        <img src="images/tiramisu.jpg" alt="tiramisu">
-                        <input type="checkbox" id="tiramisu">
-                        <label for="tiramisu">Tiramisu</label>
-                    </div>
-                    <div class="img-option">
-                        <img src="images/plum-pie.jpg" alt="plum-pie">
-                        <input type="checkbox" id="plum-pie">
-                        <label for="plum-pie">Plum pie</label>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <label for="plum-pie">
+                            <img class="img-fluid rounded" src="images/plum-pie.jpg" alt="plum-pie">
+                            <input type="checkbox" id="plum-pie">
+                            Plum pie
+                        </label>
                     </div>
 
-                </section>
-                <section class="group-other">
-                    <label for="other-cake">Fancy another cake?</label>
-                    <input type="text" id="other-cake" size="30" placeholder="Type another cake idea here">
-                </section>
+                </div>
+                <div class="mb-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <label for="other-cake" class="input-group-text">Fancy another cake?</label>
+                        </div>
+                        <input type="text" class="form-control" id="other-cake" placeholder="Type another cake idea here">
+                    </div>
+                </div>
 
-                <section class=group-2cakes>
-                    <label for="two-cakes">For diveristy 🧡 lovers:
-                    Let's bake 2 different little cakes instead of one</label>
-                    <input type="checkbox" id="two-cakes">
-                </section>
-            </fieldset> -->
+                <div class="form-check mb-3" id="group-2cakes">
+                    <input type="checkbox"  class="form-check-input" id="two-restaurants">      
+                    <label for="two-cakes" class="form-check-label">
+                        Diversity 🧡 lover: Let's bake 2 different little cakes instead of one
+                    </label>                        
+                </div>
+            </fieldset>
 
             <!-- Location -->
-            <!-- <fieldset>
+            <fieldset class="mt-2 border-bottom border-secondary">
             <legend>Location</legend>
                 <p>Can you host?</p>
-                <section class="group-options">
-                    <input type="radio" name="hosting" value="yes" checked>I can (but you all help me clean afterwards !) <br>
-                            
-                    
-                    <input type="radio" name="hosting" value="maybe">
-                    It's not sure (yet). <label for="host-condition">It depends on ...</label> <br>
-                    <textarea id="host-condition" name="host-condition" placeholder= "Per example: My roomate is studying for her finals but she might go to a friend's. She will tell me Wednesday."></textarea>         
-                    
-                    
-                    <div><input type="radio" name="hosting" value="no"> Impossible 🙁 </div>
+                <section class="w-100">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="hosting" value="yes" checked>
+                            I can (but you all help me clean afterwards !)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label w-100">
+                            <input type="radio" class="form-check-input" name="hosting" value="maybe">
+                            It's not sure (yet). 
+                            <label for="host-condition">It depends on ...</label> <br>
+                            <textarea class="form-control " id="host-condition" name="host-condition" placeholder= "Per example: My roomate is studying for her finals but she might go to a friend's. She will tell me Wednesday."></textarea>         
+                        </label>  
+                    </div>
+                    <div class="form-check mb-2">
+                        <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="hosting" value="no">
+                        Impossible 🙁 </label>
+                    </div>
                 </section>
-            </fieldset> -->
+            </fieldset>
 
             <!-- Submitting -->
-            <!-- <div id="group-submit">
+            <div id="group-submit" class="my-3 d-flex flex-row  justify-content-center align-items-center">
                 <label for="name">Who's voting?</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your name">
-                <input type="submit">
-            </div> -->
+                <input type="text" class="mx-3" id="name" name="name" required placeholder="Enter your name">
+                <input type="submit" value="Send" class="btn btn-light">
+            </div>
         </form>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
