@@ -1,0 +1,87 @@
+.nav-link {
+    font-size: 14px;
+}
+
+.navbar .nav-item.active {
+    border-left: #444 3px solid;
+  }
+
+.carousel-image-1 {
+    background: url("../img/image1.jpg");
+    background-size: cover;
+}
+
+.carousel-image-2 {
+    background: url("../img/image2.jpg");
+    background-size: cover;
+}
+
+.carousel-image-3 {
+    background: url("../img/image3.jpg");
+    background-size: cover;
+}
+
+.carousel-item {
+    height: 450px;
+}
+
+#heading {
+
+    background-image: url("../img/lights.jpg");
+}
+
+#heading, #video {
+
+    min-height: 200px;
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* for the overlay positioning */
+    position: relative; 
+
+}
+
+.dark-overlay {
+    background-color: rgba(0, 0, 0, 0.576);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+#video {
+
+    background-image: url("../img/media.jpg");
+    background-position: 0 -300px;
+}    
+
+#main-footer {
+    background-color: black;
+}
+
+/* ABOUT & SERVICES PAGES */
+
+#about-heading, #services-heading, #blog-heading {
+    background-image: url("../img/image1.jpg");
+    min-height: 200px;
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#about-main img {
+    margin-top: -80px;
+}
+
+#faq a:hover {
+    text-decoration: none;
+}
+
+.blockquote {
+    font-size: 1rem;
+}

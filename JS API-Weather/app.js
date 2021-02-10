@@ -5,6 +5,8 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sept
 const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const owKey = keys.OW;
 const mqKey = keys.MQ;
+let hourlyData = [];
+let dailyData = [];
 
 let today = new Date();
 let yesterdayUTCSeconds = Math.floor(today.getTime()/1000 - 24*3600);
