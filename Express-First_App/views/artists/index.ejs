@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Index</title>
+</head>
+<body>
+    <h1>Artists</h1>
+    <ul>
+        <% for (let artist of artists) {%>
+            <li style="display: inline-flex; flex-direction: column;">
+                <h3><%=artist.name%></h3>
+                <img src= <%= artist.url %>>
+                <a href="/artists/<%= artist.id %>">+ details</a>
+            </li>
+        <% } %>
+    </ul>
+    <a href="/artists/new">Add another Artist</a>
+    
+</body>
+</html>
