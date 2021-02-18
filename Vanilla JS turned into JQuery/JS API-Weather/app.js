@@ -1,7 +1,7 @@
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sept", "Oct", "Novr", "Dec"];
 const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let today = new Date();
-// let yesterdayUTCSeconds = Math.floor(today.getTime()/1000 - 24*3600);
+let yesterday = new Date(today - 24*3600*1000);
 
 // 1. Get city/town inputed
 $('#searchForm').on('submit', async function (e) {
@@ -18,11 +18,12 @@ $('#searchForm').on('submit', async function (e) {
     let configWeather = { params: { lat: coordinates.lat ,lon: coordinates.lng}}
     let { data } = await axios.get('https://api.openweathermap.org/data/2.5/onecall?exclude=minutely,alerts,current&units=metric&appid='+ keys.OW, configWeather);
     const { hourly, daily } = data;
-    console.dir(hourly);
-    console.dir(daily);
+    // console.dir(hourly);
+    // console.dir(daily);
     
-    //4. Clear previous displays
-    $('.forecastSlot').html('');
+    //4. Exhibit hidden forecastSlots or clear them from previous displays
+    console.log($('.hidden-wrapper').removeClass('hidden-wrapper'))||$('.forecastSlot').html('');
+   
     
     //5. Display current forecasts
     display(hourly, true);
@@ -30,14 +31,25 @@ $('#searchForm').on('submit', async function (e) {
 
     //6. Double-check the used coordinates' city/town, and print it
     //add to config appid
-    let { data : dataPlace } = await axios.get('http://open.mapquestapi.com/nominatim/v1/reverse.php?format=json&key='+ mqKey, configWeather);
-    console.dir(data);
+    let { data : dataPlace } = await axios.get('http://open.mapquestapi.com/nominatim/v1/reverse.php?format=json&key='+ keys.MQ, configWeather);
+    // console.dir(data);
     $('#foundPlace').text( `${(dataPlace.address.city||dataPlace.address.village||dataPlace.address.town)}, ${dataPlace.address.country}`);
 
     //7. Get the weather from day before incase they alert current wet floor
-    // configWeather = { params: {appid: '', lat: coordinates.lat ,lon: coordinates.lng, dt: yesterdayUTCSeconds}}
-    // resWeather = await axios.get('https://api.openweathermap.org/data/2.5/onecall/timemachine?exclude=minutely,hourly,alerts,current&units=metric', configWeather);
-    // const yesterdayWeather = ;
+    configWeather = { params: {appid: keys.OW, lat: coordinates.lat, lon: coordinates.lng, dt: yesterday.JsToOpenWeather()}}
+    resWeather = await axios.get('https://api.openweathermap.org/data/2.5/onecall/timemachine?units=metric', configWeather);
+    const yesterdayHourly = resWeather.data.hourly;
+    console.dir(yesterdayHourly);
+
+    for (hour of yesterdayHourly) {
+        if (hasPrecipitation(hour.weather[0].id)){
+            $('#past-alert').show();
+            displayYesterday(yesterdayHourly);
+            break;
+        } else {
+            $('#past-alert').hide();
+        }
+    }
 })
 
 
@@ -64,11 +76,11 @@ $('#searchForm').on('submit', async function (e) {
             
             for (const weather of array) {
 
-                let date = new Date(weather.dt*1000);
+                let date = OpenWeatherToJs(weather.dt); //let date = new Date(weather.dt*1000);
                 let dateString = isHourly ? stringifyHour(date) : stringifyDay(date);
                 let degrees = isHourly ? Math.round(weather.temp) : Math.round((weather.temp.min + weather.temp.max)/2);
-                let temp = Math.round(weather.pop*10)*10; 
-                let text = dateString + '<br>' + temp + '% chance of rain<br>' + degrees + '°C';
+                let rainProb = Math.round(weather.pop*10)*10; 
+                let text = dateString + '<br>' + rainProb + '% chance of rain<br>' + degrees + '°C';
                 let newSpan = $('<span>'+ text + '</span>'); 
         
                 let newImg = $('<img>');
@@ -79,23 +91,53 @@ $('#searchForm').on('submit', async function (e) {
                 container.append(newSpan);
             }
     }
+
+    //loop for yesterday's weather
+    const displayYesterday = function (array) {
+
+        for (const weather of array) {
+            let date = OpenWeatherToJs(weather.dt); 
+            let dateString = stringifyHour(date);
+            let degrees =  Math.round(weather.temp);
+            let rainArray = weather.rain || {"1h" : "0"} ;
+            let text = dateString + '<br>' + rainArray["1h"] + ' mm of rain<br>' + degrees + '°C';
+            let newSpan = $('<span>'+ text + '</span>'); 
+
+            let newImg = $('<img>');
+            newImg.attr('src',`./images/${weather.weather[0].icon}.png`);
+            newSpan.append(newImg);
+            $('#yesterday').append(newSpan);
+
+        }
+    }
+
 /**/
 
-/** FORMAT-CONVERSIONS FUNCTIONS*/
+/** FORMAT-CONVERSION FUNCTIONS */
 
     // Gets the coordinates from the GEOcoding API's response
     const tellCoordinates = (response) => {
         return response.data.results[0].locations[0].latLng;
     }
 
+    // Converts a JS date to the OpenWeather API's format, and vice versa.
+    Date.prototype.JsToOpenWeather  = function () { return Math.floor(this.getTime()/1000) };
+    const OpenWeatherToJs  = function (OWDate) { return new Date(OWDate*1000) };
+
+    // Checks if a weather id involves rain or snow 
+    const hasPrecipitation = function (id) {
+        return (id >= 200) && (id <= 622) &&  ![210, 211, 212, 221].includes(id);       
+    }
+
 
     const stringifyHour = (d) => {
-        
-        if (d.getDate() === today.getDate()) {
-            return `Today<br>`+d.getHours()+'h';
-        } else if (d.getDate() === (today.getDate() + 1)) {
-            return `Tomorrow<br>`+d.getHours()+'h'; 
-        } //else {
+        return d.getHours()+'h'
+
+        // if (d.getDate() === today.getDate()) {
+        //     return `Today<br>`+d.getHours()+'h';
+        // } else if (d.getDate() === (today.getDate() + 1)) {
+        //     return `Tomorrow<br>`+d.getHours()+'h'; 
+        // } else {
         //     return `${weekDays[d.getDay()]}<br> (${d.getDate()} ${monthNames[d.getMonth()]})<br>`+d.getHours()+':'+d.getMinutes(); 
         // }
         
