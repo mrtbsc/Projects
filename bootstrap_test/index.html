@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Test</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .forecastSlot {
+            min-height: 90px;
+            min-width: 600px;;
+        }
+
+        .bg-grey {
+            background-color: rgb(207, 205, 205);
+        }
+
+        .card {
+            max-height: 100px;
+            min-width: 75px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <section id="question">
+        <div class="container text-center pt-3">
+            <h3>Where do you want to skate?</h3>
+            <form>
+                <div class="row">
+                    <div class="form-group col-6 pt-1 mx-auto">
+                        <input type="text" class="form-control text-center"  name="location" placeholder="type city/town here">
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Search">
+            </form>
+        </div>
+    </section>
+
+    <section id="response" class="pt-3">
+        <div class="container">
+
+            <div class="row">
+                <div id='yesterday' class="forecastSlot bg-grey rounded col">
+                <!-- row / col / card -->
+                    <div class="row pt-3 text-center">
+                        <div class="col">
+                            <div class="card border-danger mb-3" >
+                                <div class="card-header">19h</div>
+                                <div class="card-body text-danger">
+                                    <h5 class="card-title">0.51 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>  
+                        </div>
+                
+                        <div class="col">
+                            <div class="card border-dark mb-3" >
+                                <div class="card-header">20h</div>
+                                <div class="card-body text-dark">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card text-white bg-info mb-3" >
+                                <div class="card-header">21h</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card bg-light mb-3" >
+                                <div class="card-header">22h</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card text-white bg-warning mb-3" >
+                                <div class="card-header">23h</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">3.03 mm of rain</h5>
+                                  <p class="card-text">12 ºC</p>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card border-warning mb-3" >
+                                <div class="card-header">24h</div>
+                                <div class="card-body text-warning">
+                                  <h5 class="card-title">40% chance of rain</h5>
+                                  <p class="card-text">12 ºC</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-danger mb-3" >
+                                <div class="card-header">19h</div>
+                                <div class="card-body text-danger">
+                                    <h5 class="card-title">0.51 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>  
+                        </div>
+                
+                        <div class="col">
+                            <div class="card border-dark mb-3" >
+                                <div class="card-header">20h</div>
+                                <div class="card-body text-dark">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card text-white bg-info mb-3" >
+                                <div class="card-header">21h</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card bg-light mb-3" >
+                                <div class="card-header">22h</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card text-white bg-warning mb-3" >
+                                <div class="card-header">23h</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">3.03 mm of rain</h5>
+                                  <p class="card-text">12 ºC</p>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card border-warning mb-3" >
+                                <div class="card-header">24h</div>
+                                <div class="card-body text-warning">
+                                  <h5 class="card-title">40% chance of rain</h5>
+                                  <p class="card-text">12 ºC</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-danger mb-3" >
+                                <div class="card-header">19h</div>
+                                <div class="card-body text-danger">
+                                    <h5 class="card-title">0.51 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>  
+                        </div>
+                
+                        <div class="col">
+                            <div class="card border-dark mb-3" >
+                                <div class="card-header">20h</div>
+                                <div class="card-body text-dark">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card text-white bg-info mb-3" >
+                                <div class="card-header">21h</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card bg-light mb-3" >
+                                <div class="card-header">22h</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card text-white bg-warning mb-3" >
+                                <div class="card-header">23h</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">3.03 mm of rain</h5>
+                                  <p class="card-text">12 ºC</p>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card border-warning mb-3" >
+                                <div class="card-header">24h</div>
+                                <div class="card-body text-warning">
+                                  <h5 class="card-title">40% chance of rain</h5>
+                                  <p class="card-text">12 ºC</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-danger mb-3" >
+                                <div class="card-header">19h</div>
+                                <div class="card-body text-danger">
+                                    <h5 class="card-title">0.51 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>  
+                        </div>
+                
+                        <div class="col">
+                            <div class="card border-dark mb-3" >
+                                <div class="card-header">20h</div>
+                                <div class="card-body text-dark">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card text-white bg-info mb-3" >
+                                <div class="card-header">21h</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card bg-light mb-3" >
+                                <div class="card-header">22h</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">0 mm of rain</h5>
+                                    <p class="card-text">12 ºC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card text-white bg-warning mb-3" >
+                                <div class="card-header">23h</div>
+                                <div class="card-body">
+                                  <h5 class="card-title">3.03 mm of rain</h5>
+                                  <p class="card-text">12 ºC</p>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card border-warning mb-3" >
+                                <div class="card-header">24h</div>
+                                <div class="card-body text-warning">
+                                  <h5 class="card-title">40% chance of rain</h5>
+                                  <p class="card-text">12 ºC</p>
+                                </div>
+                              </div>
+                        </div>
+                                                
+                    </div>
+
+
+                
+                </div>
+            </div>
+
+
+
+            <div class="row mt-2">
+                <div id='today' class="forecastSlot bg-grey rounded col">
+                    <div class="card-deck pt-3">
+
+                        <div class="card border-danger mb-3" >
+                            <div class="card-header">19h</div>
+                            <div class="card-body text-danger">
+                                <h5 class="card-title">0.51 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>  
+                
+                        <div class="card border-dark mb-3" >
+                            <div class="card-header">20h</div>
+                            <div class="card-body text-dark">
+                                <h5 class="card-title">0 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card text-white bg-info mb-3" >
+                            <div class="card-header">21h</div>
+                            <div class="card-body">
+                                <h5 class="card-title">0 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card bg-light mb-3" >
+                            <div class="card-header">22h</div>
+                            <div class="card-body">
+                                <h5 class="card-title">0 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card text-white bg-warning mb-3" >
+                            <div class="card-header">23h</div>
+                            <div class="card-body">
+                                <h5 class="card-title">3.03 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-warning mb-3" >
+                            <div class="card-header">24h</div>
+                            <div class="card-body text-warning">
+                                <h5 class="card-title">40% chance of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-danger mb-3" >
+                            <div class="card-header">19h</div>
+                            <div class="card-body text-danger">
+                                <h5 class="card-title">0.51 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>  
+                
+                        <div class="card border-dark mb-3" >
+                            <div class="card-header">20h</div>
+                            <div class="card-body text-dark">
+                                <h5 class="card-title">0 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card text-white bg-info mb-3" >
+                            <div class="card-header">21h</div>
+                            <div class="card-body">
+                                <h5 class="card-title">0 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card bg-light mb-3" >
+                            <div class="card-header">22h</div>
+                            <div class="card-body">
+                                <h5 class="card-title">0 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card text-white bg-warning mb-3" >
+                            <div class="card-header">23h</div>
+                            <div class="card-body">
+                                <h5 class="card-title">3.03 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-warning mb-3" >
+                            <div class="card-header">24h</div>
+                            <div class="card-body text-warning">
+                                <h5 class="card-title">40% chance of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-danger mb-3" >
+                            <div class="card-header">19h</div>
+                            <div class="card-body text-danger">
+                                <h5 class="card-title">0.51 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>  
+                
+                        <div class="card border-dark mb-3" >
+                            <div class="card-header">20h</div>
+                            <div class="card-body text-dark">
+                                <h5 class="card-title">0 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card text-white bg-info mb-3" >
+                            <div class="card-header">21h</div>
+                            <div class="card-body">
+                                <h5 class="card-title">0 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card bg-light mb-3" >
+                            <div class="card-header">22h</div>
+                            <div class="card-body">
+                                <h5 class="card-title">0 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+
+                        <div class="card text-white bg-warning mb-3" >
+                            <div class="card-header">23h</div>
+                            <div class="card-body">
+                                <h5 class="card-title">3.03 mm of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-warning mb-3" >
+                            <div class="card-header">24h</div>
+                            <div class="card-body text-warning">
+                                <h5 class="card-title">40% chance of rain</h5>
+                                <p class="card-text">12 ºC</p>
+                            </div>
+                        </div>
+                                                
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-2">
+                <div id='tomorrow' class="forecastSlot bg-grey rounded col">
+                    <div class="d-flex" style="overflow: auto;">
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                                        <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">20h</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">0 mm of rain</h5>
+                            <p class="card-text">12 ºC</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div id='other-days' class="forecastSlot bg-grey rounded col"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
