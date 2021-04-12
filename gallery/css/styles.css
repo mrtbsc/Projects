@@ -28,6 +28,7 @@ body {
     padding: 20px;
     position: relative;
     top: 33vh;
+    width: 40%;
 }
 
 h1 {
@@ -141,18 +142,7 @@ footer span {
 }
 
 /** adjustments for the landing area **/
-@media (max-width:650px) {
-    #company-text {
-        width: 60%;
-    }  
-
-    #company-photo-box {
-        width: 40%;
-    }
-
-}
-
-@media (max-width:570px) {
+@media (max-width:700px) {
     #company-text {
         float: none;
         height: 50vh;
