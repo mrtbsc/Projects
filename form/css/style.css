@@ -1,3 +1,4 @@
+/* GENERAL */
 body {
     background-color: #ffeeba;
     font-family: 'Englebert', sans-serif;
@@ -18,29 +19,41 @@ fieldset {
 }
 
 /* FIELDSETS WITH IMAGES */
-p {margin: 10px 0;}
+p {margin: 10px 0}
 
 .clue {
     display: block;
     font-size: 14px;
 }
 
+.group-options {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
 .img-option { 
-    display: inline-block;
-    margin-bottom: 15px;}
+    padding: 5px;
+    padding-bottom: 7px;
+    float: left;
+    box-sizing: border-box;
+    width: 16.66%;
+    }
 
 img {
+    box-sizing: border-box;
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+    max-width: 300px;
+
     border-radius: 8px;
-    display: block;
-    height: 100px;
-    width: 150px;    
+    display: block;     
 }
 
-.group-other{ margin-top: 10px; }
+.group-other{ margin-top: 0 }
 
-
-/* FOOD TO AVOID */
-.group-allergies { 
+/* SECTION 'FOOD TO AVOID' */
+#group-allergies { 
     margin-top: 8px; 
     margin-bottom: 4px;
 }
@@ -50,44 +63,62 @@ img {
     width: 350px;
 }
 
-/* LOCATION */
+/* SECTION 'LOCATION' */
 input[type=radio] {
     margin-left: 0px;
     float: left;
 }
 
 textarea#host-condition {
-    display: block;
     float: left;
     clear: right;
     width: 100%;
-    height: auto;
     max-width: 400px;
     min-height: 60px;
     margin: 4px 0;
 }
-textarea#host-condition + div {
+#group-hosting-no {
     float:left; 
     clear: left;
 }
 
 /* SUBMIT BUTTON */
-/* input[type=submit] {
-
-} */
-
 #group-submit {
-    /* border: 2px solid rgb(135, 130, 127); */
-    padding: 5px;
+
     width: 320px;
     display: block;
-    margin: 5px auto;
+    margin: 10px auto;
 }
 
-/***** For small devices *****/
+/***** Responsive adjustments *****/
+
+@media (max-width: 1024px) {
+    .img-option { 
+        width: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-option { 
+        width: 25%;
+    }
+}
+
+@media (max-width: 600px) {
+    .img-option { 
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 500px) {
+    .img-option { 
+        width: 50%;
+    }
+
+}
 
 @media (max-width: 450px) {
-    .group-2restaurants, .group-diet , .group-2cakes{
+    #group-2restaurants, #group-diet , #group-2cakes{
         margin-top: 8px;
     }
 
@@ -96,27 +127,19 @@ textarea#host-condition + div {
     }
 }
 
-@media (max-width: 352px) {
-    img {
-        border-radius: 8px;
-        width: 110px;
-        height: 73px;    
-    }
+@media (max-width: 400px) {
 
-    #other-nos {
-        width: 150px;
-    }
+    input#allergies { display: block }
 
-    label[for=name] {
+    input#other-nos { width: 95%; }
+
+    label[for=person] {
         display: block;
         text-align: center;
     } 
     
-    input#name, input[type=submit] {
+    input#person, input[type=submit] {
         display: block;
         margin: 3px auto;
     }
-
-
-
 }

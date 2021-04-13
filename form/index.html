@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yummy Lunch</title>
 
     <link rel='stylesheet' href='css/style.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Montserrat&display=swap" rel="stylesheet">
-    <!--<link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@125.6,539;138.1,742&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -20,43 +18,44 @@
         <legend>Food Ordering</legend>
         <p>
             Let's vote on the restaurant types we prefer!
-            <span class="clue">( Each of us can vote on several types here, and then we can easily decide on a particular resturant for the type that wins. )</span>
+            <span class="clue">( Each of us can vote on several types here, and later we can decide on a particular restaurant for the winner type )</span>
         </p>
         <section class="group-options">
             <div class="img-option">
-                <img src="images/italian-food.jpg" alt="italian-food">
-                <input type="checkbox" id="italian">
-                <label for="italian">Italian</label>
+                <label for="italian">
+                    <img src="images/italian-food.jpg" alt="italian-food">
+                    <input type="checkbox" id="italian"> Italian
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/chinese.jpg" alt="chinese-food">
-                <input type="checkbox" id="chinese">
-                <label for="chinese">Chinese</label>
+                <label for="chinese">
+                    <img src="images/chinese.jpg" alt="chinese-food">
+                    <input type="checkbox" id="chinese"> Chinese
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/japanese.jpg" alt="japanese-food">
-                <input type="checkbox" id="japanese">
-                <label for="japanese">Japanese</label>
+                <label for="japanese">
+                    <img src="images/japanese.jpg" alt="japanese-food">
+                    <input type="checkbox" id="japanese"> Japanese
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/american.jpg" alt="american-food">
-                <input type="checkbox" id="american">
-                <label for="american">American</label>
-            </div>
-            <!-- <div class="img-option">
-                <img src="/images/italian-food.jpg" alt="italian-food">
-                <input type="checkbox" id="turkish">
-                <label for="turkish">Turkish</label>
-            </div> -->
-            <div class="img-option">
-                <img src="images/indian.jpg" alt="indian-food">
-                <input type="checkbox" id="indian">
-                <label for="indian">Indian</label>
+                <label for="american">
+                    <img src="images/american.jpg" alt="american-food">
+                    <input type="checkbox" id="american"> American
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/spanish.jpg" alt="spanish-food">
-                <input type="checkbox" id="spanish">
-                <label for="spanish">Spanish</label>
+                <label for="indian">
+                    <img src="images/indian.jpg" alt="indian-food">
+                    <input type="checkbox" id="indian"> Indian
+                </label>
+            </div>
+            <div class="img-option">
+                <label for="spanish">
+                    <img src="images/spanish.jpg" alt="spanish-food">
+                    <input type="checkbox" id="spanish"> Spanish
+                </label>
             </div>
         </section>
 
@@ -65,21 +64,22 @@
             <input type="text" id="other-restaurant" size="30" placeholder="Suggest another restaurant here">
         </section>
 
-        <section class=group-2restaurants>
+        <section id=group-2restaurants>
             <label for="two-restaurants"> For diveristy 🧡 lovers:
             Let's order from 2 restaurants </label>  
             <input type="checkbox" id="two-restaurants">
         </section>
     </fieldset>
+
     <!-- Avoided Food -->
     <fieldset>
         <legend>Food to avoid</legend>
-        <section class="group-allergies">
+        <section id="group-allergies">
             <label for="allergies">Allergies & Intolerances</label>
             <input id="allergies" type="text" placeholder="Per example: Dairy">
         </section>
 
-        <section class="group-diet">
+        <section id="group-diet">
             <label for="diet">Diet regarding animal products</label>
             <select id="diet">
                 <option value disabled selected>Select one</option>
@@ -106,49 +106,58 @@
         </p>
         <section class="group-options">
             <div class="img-option">
-                <img src="images/carrot-cake.jpg" alt="carrot-cake">
-                <input type="checkbox" id="carrot-cake">
-                <label for="carrot-cake">Carrot Cake</label>
+                <label for="carrot-cake">
+                    <img src="images/carrot-cake.jpg" alt="carrot-cake">
+                    <input type="checkbox" id="carrot-cake"> Carrot cake
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/brownies.jpg" alt="brownies">
-                <input type="checkbox" id="brownies">
-                <label for="brownies">Brownies</label>
+                <label for="brownies">
+                    <img src="images/brownies.jpg" alt="brownies">
+                    <input type="checkbox" id="brownies"> Brownies
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/apple-pie.jpg" alt="apple pie">
-                <input type="checkbox" id="apple-pie">
-                <label for="apple-pie">Apple pie</label>
+                <label for="apple-pie">
+                    <img src="images/apple-pie.jpg" alt="apple pie">
+                    <input type="checkbox" id="apple-pie"> Apple pie
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/strawberries.jpg" alt="strawberries cake">
-                <input type="checkbox" id="strawberries">
-                <label for="strawberries">Strawberry cake</label>
+                <label for="strawberries">
+                    <img src="images/strawberries.jpg" alt="strawberries cake">
+                    <input type="checkbox" id="strawberries"> Strawberry cake
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/banana-cake.jpg" alt="banana cake">
-                <input type="checkbox" id="banana-cake">
-                <label for="banana-cake">Banana bread</label>
+                <label for="banana-cake">
+                    <img src="images/banana-cake.jpg" alt="banana cake">
+                    <input type="checkbox" id="banana-cake"> Banana bread
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/choc-mousse.jpg" alt="choc-mousse">
-                <input type="checkbox" id="choc-mousse">
-                <label for="choc-mousse">Chocolate mousse</label>
+                <label for="choc-mousse">
+                    <img src="images/choc-mousse.jpg" alt="choc-mousse">
+                    <input type="checkbox" id="choc-mousse"> Chocolate mousse
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/lemon-cake.jpg" alt="lemon-cake">
-                <input type="checkbox" id="lemon-cake">
-                <label for="lemon-cake">Lemon cake</label>
+                <label for="lemon-cake">
+                    <img src="images/lemon-cake.jpg" alt="lemon-cake">
+                    <input type="checkbox" id="lemon-cake"> Lemon cake
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/tiramisu.jpg" alt="tiramisu">
-                <input type="checkbox" id="tiramisu">
-                <label for="tiramisu">Tiramisu</label>
+                <label for="tiramisu">
+                    <img src="images/tiramisu.jpg" alt="tiramisu">
+                    <input type="checkbox" id="tiramisu"> Tiramisu
+                </label>
             </div>
             <div class="img-option">
-                <img src="images/plum-pie.jpg" alt="plum-pie">
-                <input type="checkbox" id="plum-pie">
-                <label for="plum-pie">Plum pie</label>
+                <label for="plum-pie">
+                    <img src="images/plum-pie.jpg" alt="plum-pie">
+                    <input type="checkbox" id="plum-pie"> Plum pie
+                </label>
             </div>
 
         </section>
@@ -157,7 +166,7 @@
             <input type="text" id="other-cake" size="30" placeholder="Type another cake idea here">
         </section>
 
-        <section class=group-2cakes>
+        <section id=group-2cakes>
             <label for="two-cakes">For diveristy 🧡 lovers:
             Let's bake 2 different little cakes instead of one</label>
             <input type="checkbox" id="two-cakes">
@@ -169,22 +178,31 @@
     <legend>Location</legend>
         <p>Can you host?</p>
         <section class="group-options">
-            <input type="radio" name="hosting" value="yes" checked>I can (but you all help me clean afterwards !) <br>
-                    
+            <div>
+                <input type="radio" id="hosting-yes" name="hosting" value="yes" checked>
+                <label for="hosting-yes">I can (but you all help me clean afterwards !)</label> <br>
+            </div>          
             
-            <input type="radio" name="hosting" value="maybe">
-            It's not sure (yet). <label for="host-condition">It depends on ...</label> <br>
-            <textarea id="host-condition" name="host-condition" placeholder= "Per example: My roomate is studying for her finals but she might go to a friend's. She will tell me Wednesday."></textarea>         
-            
-            
-            <div><input type="radio" name="hosting" value="no"> Impossible 🙁 </div>
+            <div>
+                <input type="radio" id="hosting-maybe" name="hosting" value="maybe">
+                <label for="hosting-maybe">It's not sure (yet).</label>
+                <label for="host-condition">It depends on ...</label> 
+                <br>
+                <textarea id="host-condition" name="host-condition" placeholder= "Per example: My roomate is studying for her finals but she might go to a friend's. She will tell me Wednesday."></textarea>
+
+            </div>
+
+            <div id="group-hosting-no">
+                <input type="radio" id="hosting-no" name="hosting" value="no">
+                <label for="hosting-no"> Impossible 🙁 </label>
+            </div>
         </section>
     </fieldset>
 
     <!-- Submitting -->
     <div id="group-submit">
-        <label for="name">Who's voting?</label>
-        <input type="text" id="name" name="name" required placeholder="Enter your name">
+        <label for="person">Who's voting?</label>
+        <input type="text" id="person" name="person" required placeholder="Enter your name">
         <input type="submit">
     </div>
 
