@@ -1,58 +1,67 @@
-body, html {
-    height: 100%;
-}
-
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.parallax {
-    /* Full height */
-    height: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    /* Other effects for the background images */
-    opacity: 0.7;
-    position: relative;
+/*** GENERAL PART ***/
+    body, html {
+        height: 100%;
     }
 
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Inconsolata', monospace;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .img-parallax {
+
+        /* the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        /* other effects for 'parallaxed images' here */
+        height: 100%;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* elements inside 'parallaxed images' */
+    .img-parallax > * {
+        margin-top: 0px;
+        margin-bottom: 0;
+    }
+/*** END OF GENERAL PART ***/
+
 /*** TITLE PART***/
-.img-town {
-    background-image: url("../images/Town.jpg");
-}
+    .img-town {
+        background-image: url("../images/Town.jpg");
+        position: relative;
+    }
 
-h1 {
-    font-family: 'Inconsolata', monospace;
-    font-size: 48px;
-    font-weight: normal;
-    color: gray;
-    letter-spacing: 5px;
-    margin-top: 0px;
-    position: absolute;
-    top: 46%;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-}
+    h1 {
+        font-size: 48px;
+        color: gray;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
 
-span {
-    background-color: white;
-    border: 5px solid gray;
-    padding: 7px 15px;
-    opacity: .8;
-}
+    h1 span {
+        background-color: white;
+        border: 5px solid gray;
+        padding: 7px 15px;
+        opacity: .8;
+    }
 
-h1 br {
-    display: none;
-}
+    h1 br {
+        display: none;
+    }
 /*** END OF TITLE PART ***/
-
 
 section {
     font-size: 20.5px;
@@ -61,33 +70,23 @@ section {
     background-color: #282E34;
 }
 
-h3 {
-    font-family: 'Inconsolata', monospace;
-    font-weight: 539;
-    margin-top: 0;
-    text-align: center;
-    color: whitesmoke;
-}
-
 section.dark {
     color: gray;
 }
 
-.dark h3 {
+section h3 {
+    margin-top: 0;
+    color: whitesmoke;
+}
+
+section.dark h3 {
     color: rgb(185, 185, 167);
 }
 
 h2 {
-    font-family: 'Inconsolata', monospace;
     letter-spacing: 11px;
-    margin-top: 0px;
-    position: absolute;
-    top: 37%;
-    width: 100%;
-    text-align: center;
     text-transform: uppercase;
     font-size: 56px;
-    font-weight: normal;
 }   
 
 #img-museum {
@@ -114,34 +113,42 @@ section:nth-of-type(3) {
 }
 
 #bye-text {
-    position: relative;
-    bottom: 70%;
-    width: 100%;
     text-align: center;
     font-family: 'Pacifico', cursive;
+    position: relative;
+    bottom: 70%;
     font-size: 30px;
     color:#3B3838;
 }
 
 /********** Small devices adjustments **********/
-@media (max-width: 522px) {
-    h1 br {
-        display: block;
-    }
+    @media (max-width: 522px) {
+        h1 br {
+            display: block;
+        }
 
-    span {
-        -webkit-box-decoration-break: clone;
-        -o-box-decoration-break: clone;
-        box-decoration-break: clone;
-        display: inline-block;
-        font-size: 32px;
-    }
+        h1 span {
+            -webkit-box-decoration-break: clone;
+            -o-box-decoration-break: clone;
+            box-decoration-break: clone;
+            display: inline-block;
+            font-size: 32px;
+        }
 
-    h1 {
-        top: 42%;
-    }
+        section {
+            padding: 20px;
+        }
 
-    h2 {
-        font-size: 50px;
+        h2 {
+            font-size: 50px;
+        }
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 17px;
+            text-align:center
+        }
     }
-}

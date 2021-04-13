@@ -1,6 +1,6 @@
 # Parallax-effect webpage
 
-The result of this project can be accessed here https://mrtbsc.github.io/Projects/Web-Parallax/ .
+The result of this project can be accessed here https://mrtbsc.github.io/Projects/parallax-effect/ .
 Its ojective was to practice the **parallax effect**, which is the behaviour of its background images. It uses **HTML and CSS**.
 
 ## Inspiration
