@@ -12,17 +12,17 @@
 </head>
 
 <body class="bg-primary">
-    <div class="container">    
-        <form>
+    <div class="container-fluid">    
+        <form class="mt-4">
             <!-- Food Ordering -->
-            <fieldset class="mt-3 border-bottom border-secondary">
-                <legend>Food Ordering</legend>
-                <p>
-                    Let's vote on the restaurant types we prefer! <br>
-                    <small>( Each of us can vote on several types here, and then we can easily decide on a particular resturant for the type that wins. )</small>
+            <fieldset class="border border-secondary rounded px-3 pt-3 mb-3" id="fieldset-restaurant">
+                <legend class="text-muted">Food Ordering</legend>
+                <p class="fieldset-intro">
+                    Let's vote on the restaurant types we prefer!
+                    <small class="d-block">( each of us can vote on several types here, and later we can decide on a particular restaurant for the winner type )</small>
                 </p>
                 
-                <div class="row">
+                <div class="row px-2">
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                         <label for="italian">
                         <img src="images/italian-food.jpg" class="img-fluid rounded" alt="italian-food">
@@ -62,16 +62,16 @@
                 </div>
 
                 <div class="mb-2">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <label for="other-restaurant" class="input-group-text bg-primary">Thinking of another restaurant?</label>
+                    <div class="input-group  col-xl-5 col-lg-8 col">
+                        <div class="input-group-prepend d-block">
+                            <label for="other-restaurant" class="input-group-text bg-primary d-md-flex d-none">Thinking of another restaurant?</label>
                         </div>
-                            <input type="text" class="form-control" id="other-restaurant" placeholder=" Suggest it here">
+                        <input type="text" class="form-control" id="other-restaurant" placeholder="Other suggestions here">
                     </div>                   
                 </div>
 
 
-                <div class="form-check mb-3" id="group-2restaurants">
+                <div class="form-check mb-2" id="group-2restaurants">
                             <input type="checkbox"  class="form-check-input" id="two-restaurants">      
                             <label for="two-restaurants" class="form-check-label">
                                 Diversity 🧡 lover: Let's order from 2 restaurants
@@ -80,39 +80,53 @@
             </fieldset>
 
             <!-- Avoided Food -->
-            <fieldset class="mt-2 border-bottom border-secondary">
-                <legend>Food to avoid</legend>
-                <section class="form-group" id="group-allergies">
-                    <label for="allergies">Allergies & Intolerances</label>
-                    <input id="allergies" type="text" class="form-control" placeholder="Per example: Dairy">
+            <fieldset class="border border-secondary rounded px-3 pt-3 mb-3">      
+                <legend class="text-muted">Food to avoid</legend>
+                
+
+                <section class="fieldset-intro form-group form-row align-items-center mb-2" id="group-allergies">
+                    <div class="col-xx-2 col-xl-3 col-md-4 col-auto col-form-label">
+                        <label for="allergies" class="mb-0">Allergies & Intolerances</label>
+                    </div>
+                    <div class="col-auto">
+                        <input id="allergies" type="text" class="form-control" placeholder="Per example: Dairy">
+                    </div>
                 </section>
 
-                <section class="group-diet">
-                    <label for="diet">Diet regarding animal products</label>
-                    <select class="form-control" id="diet">
-                        <option value disabled selected>Select one</option>
-                        <option value="vegan">Vegan</option>
-                        <option value="eco">Only Free-Range/Eco</option>
-                        <option value="vegeterian">Vegeterian</option>
-                        <option value="pesceterian">Pesceterian</option>
-                        <option value="none">None of the above</option>
-                    </select>
+                <section class="form-group form-row align-items-center mb-2">
+                    <div class="col-xx-2  col-xl-3 col-md-4 col-auto col-form-label">
+                        <label for="diet" class="mb-0">Diet regarding animal products</label>
+                    </div>
+                    <div class="col-auto">
+                        <select class="form-control" id="diet">
+                            <option value disabled selected>Select one</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="eco">Only Free-Range/Eco</option>
+                            <option value="vegeterian">Vegeterian</option>
+                            <option value="pesceterian">Pesceterian</option>
+                            <option value="none">None: simply omnivorous</option>
+                        </select>
+                    </div>
                 </section>
                 
-                <section class="form-group" id="group-other">
-                    <label for="other-nos">Other food that makes you go 'uuugh'</label>
-                    <input type=text id="other-nos" class="form-control" name="other-nos" placeholder="Despisable food here">
+                <section class="form-group form-row align-items-center mb-3" id="group-other">
+                    <div class="col-xx-2 col-xl-3  col-md-4 col-auto col-form-label">
+                        <label for="other-nos" class="mb-0">Other food that makes you go 'uuugh'</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type=text id="other-nos" class="form-control" name="other-nos" placeholder="Despisable food here">
+                    </div>
                 </section>
             </fieldset>
 
             <!-- Cake Baking -->
-            <fieldset class="mt-2 border-bottom border-secondary">
-                <legend>Cake Baking</legend>
-                <p>
-                    Let's vote on the cakes we would like to bake ! <br>
-                    <small>( Each of us can vote on several cakes, but we shall only bake the one that has more votes. )</small> 
+            <fieldset class="border border-secondary rounded px-3 pt-3 mb-3" id="fieldset-cake">      
+                <legend class="text-muted">Cake Baking</legend>
+                <p class="fieldset-intro">
+                    Let's vote on the cakes we would like to bake !
+                    <small class="d-block">( each of us can vote on several cakes, but we shall only bake the one that has more votes )</small> 
                 </p>
-                <div class="row">
+                <div class="row px-2">
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                         <label for="carrot-cake">
                             <img class="img-fluid rounded" src="images/carrot-cake.jpg" alt="carrot-cake">
@@ -172,16 +186,16 @@
 
                 </div>
                 <div class="mb-2">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
+                    <div class="input-group  col-xl-5 col-lg-8 col">
+                        <div class="input-group-prepend d-md-flex d-none">
                             <label for="other-cake" class="input-group-text bg-primary">Fancy another cake?</label>
                         </div>
-                        <input type="text" class="form-control" id="other-cake" placeholder="Type another cake idea here">
+                        <input type="text" class="form-control" id="other-cake" placeholder="Other suggestions here">
                     </div>
                 </div>
 
-                <div class="form-check mb-3" id="group-2cakes">
-                    <input type="checkbox"  class="form-check-input" id="two-restaurants">      
+                <div class="form-check mb-2" id="group-2cakes">
+                    <input type="checkbox"  class="form-check-input" id="two-cakes">      
                     <label for="two-cakes" class="form-check-label">
                         Diversity 🧡 lover: Let's bake 2 different little cakes instead of one
                     </label>                        
@@ -189,10 +203,10 @@
             </fieldset>
 
             <!-- Location -->
-            <fieldset class="mt-2 border-bottom border-secondary">
-            <legend>Location</legend>
-                <p>Can you host?</p>
-                <section class="w-100">
+            <fieldset class="border border-secondary rounded px-3 pt-3">      
+            <legend class="text-muted">Location</legend>
+                <p class="fieldset-intro mb-1">Can you host?</p>
+                <section class="pl-2 w-100">
                     <div class="form-check">
                         <label class="form-check-label">
                             <input type="radio" class="form-check-input" name="hosting" value="yes" checked>
@@ -216,10 +230,12 @@
             </fieldset>
 
             <!-- Submitting -->
-            <div id="group-submit" class="my-3 d-flex flex-row  justify-content-center align-items-center">
-                <label for="name">Who's voting?</label>
-                <input type="text" class="mx-3 form-control col-6 col-md-4 col-lg-3" id="name" name="name" required placeholder="Enter your name">
-                <input type="submit" value="Send" class="btn btn-light">
+            <div id="group-submit" class="my-3 form-row  justify-content-center align-items-center">
+                <label for="name" class='col-auto d-sm-flex d-none'>Who's voting?</label>
+                <div class="col-auto mx-2 mb-2">
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Type your name">
+                </div>
+                <input type="submit" value="Send" class="btn btn-light col-auto mb-2 rounded-circle">
             </div>
         </form>
 </div>

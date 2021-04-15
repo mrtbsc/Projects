@@ -2,128 +2,42 @@
     font-family: 'Englebert', sans-serif;
 }
 
-/* .img-option img {
-    max-width: 100%;
-    height: auto;
-} */
 
 input[type=text] {
-    /* background-color: #ffeeba; */
+
     font-family: 'Montserrat', sans-serif;
 }
 textarea, select {
     background: #ffeeba;
     font-family: 'Montserrat', sans-serif;
 }
-/*
+
 legend {
-    color: rgb(135, 130, 127);
-    font-size: 18px; 
     font-weight: bold;
-}
-fieldset { 
-    padding-bottom: 16px;
-    box-sizing: border-box;
-    width: 100%;
-}
+    margin-bottom: 0;
+    width: auto; 
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom: none;
 
-/* FIELDSETS WITH IMAGES */
-/* p {margin: 10px 0;}
-
-.clue {
-    display: block;
-    font-size: 14px;
 }
 
-.img-option { 
-    display: inline-block;
-    margin-bottom: 15px;}
-
-img {;
-    height: 100px;
-    width: 150px;    
+.fieldset-intro {
+    margin-top: -1rem;
 }
 
-.group-other{ margin-top: 10px; }
- */
+/* adjustments for responsiveness */
 
-/* FOOD TO AVOID */
-/* .group-allergies { 
-    margin-top: 8px; 
-    margin-bottom: 4px;
-}
-
-#other-nos {
-    display: inline-block;
-    width: 350px;
-} */
-
-/* LOCATION */
-/* input[type=radio] {
-    margin-left: 0px;
-    float: left;
-}
-
-textarea#host-condition {
-    display: block;
-    float: left;
-    clear: right;
-    width: 100%;
-    height: auto;
-    max-width: 400px;
-    min-height: 60px;
-    margin: 4px 0;
-}
-textarea#host-condition + div {
-    float:left; 
-    clear: left;
-} */
-
-/* SUBMIT BUTTON */
-/* input[type=submit] {
-
-} */
-/* 
-#group-submit {
-    padding: 5px;
-    width: 320px;
-    display: block;
-    margin: 5px auto;
-}  */
-
-/***** For small devices *****/
-
-/* @media (max-width: 450px) {
-    .group-2restaurants, .group-diet , .group-2cakes{
-        margin-top: 8px;
+@media (max-width: 500px) {
+    #fieldset-restaurant .col-6,
+    #fieldset-cake .col-6 {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
     }
 
-    input[type=radio] {
-        padding-left: 8px;
+    textarea.form-control {
+        height: 150px;
     }
-}
-
-@media (max-width: 352px) {
-    img {
-        border-radius: 8px;
-        width: 110px;
-        height: 73px;    
-    }
-
-    #other-nos {
-        width: 150px;
-    }
-
-    label[for=name] {
-        display: block;
-        text-align: center;
-    } 
-    
-    input#name, input[type=submit] {
-        display: block;
-        margin: 3px auto;
-    }
- */
 
 
 }
+
