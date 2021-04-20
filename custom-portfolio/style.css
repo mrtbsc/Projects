@@ -1,7 +1,6 @@
 /*----  Main Style  ----*/
 #cards_landscape_wrap-2{
   text-align: center;
-  background: #F7F7F7;
 }
 #cards_landscape_wrap-2 .container{
   padding-top: 80px; 
@@ -47,14 +46,13 @@
 
 #cards_landscape_wrap-2 .card-flyer{
   background: #FFFFFF;
-  margin-top: 50px;
+  margin-top: 20px;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
-  height: 93%;
 }
 #cards_landscape_wrap-2 .card-flyer:hover{
   background: #fff;
@@ -69,7 +67,7 @@
 #cards_landscape_wrap-2 .card-flyer .text-box p{
   margin-top: 10px;
   margin-bottom: 0px;
-  padding-bottom: 0px; 
+  padding-bottom: 25px; 
   font-size: 14px;
   letter-spacing: 1px;
   color: #000000;
@@ -82,40 +80,58 @@
   text-transform: uppercase;
   font-family: 'Roboto Black', sans-serif;
   letter-spacing: 1px;
-  color: #00acc1;
+  color: #7d9c69;
 }
 
 /** own **/
 
+body {
+  background: #F7F7F7;
+}
+
 .text-footer {
+  font-family: 'Roboto Black', sans-serif;
   font-size: small;
   color: #6c757d;
-  padding-left: 10px;
-  margin-top: 20px;
   text-align: left;
   position: absolute;
-  bottom: -15px;
+  bottom: 10px;
+  left: 25px;
 }
 
 h1, h2 {
   font-family: 'Kaushan Script', cursive;
 }
+ 
+h1 {
+  font-size: 1.75rem;
+}
+
+nav i {
+  font-size: 0.75rem;
+}
+
+nav {
+  margin-bottom: -10px;
+}
 
 #intro {
   background-color: #A9D18E;
+  margin: 0.6rem;
+  letter-spacing: 1px;
 }
 
 #intro p { 
-  width: 75%;
-  font-size: 1.4rem; 
+  width: 100%;
+  font-size: .75rem; 
   }
 
 #greeting { font-size: 1.5em; }
 
-#projects { padding-top: px;}
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0;
 }
 
 .half-divider {
@@ -123,8 +139,72 @@ h2 {
   height: 1px;
 }
 
+@media (min-width: 425px) {
+   
+  .bg-sm-dark {
+    background-color: #343a40;
+  }
+
+  nav.navbar i {
+    color: #f8f9fa!important;
+    font-size: 1rem;
+  }
+
+  nav.navbar h1 {
+    color: #f8f9fa!important;
+    font-size: 2.5rem;
+  } 
+
+  nav {
+    margin-bottom: 0;
+  }
+
+  #intro p {
+      /* width: 75%; */
+      font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+}
+
+
+@media (min-width: 531px) {
+  #intro p {
+      width: 75%;
+      font-size: 1.4rem;
+  }
+
+  #cards_landscape_wrap-2 {
+    padding-top: 40px;
+  }
+  
+  #cards_landscape_wrap-2 .card-flyer {
+    margin-top: 50px;
+    height: 93%;
+  }
+
+  .text-footer {
+    bottom: -10px;
+  }
+
+
+
+}
+
 @media (min-width: 990px) {
   #intro p {
-      width: 55%;
+      width: 50%;
   }
+
+}
+
+@media (min-width: 1220px) {
+  #intro p {
+      width: 40%;
+  }
+
 }
