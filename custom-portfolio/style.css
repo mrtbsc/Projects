@@ -26,6 +26,7 @@
   -ms-transition:all .9s ease; 
   height: 200px;
   object-fit: cover;
+  object-position: -50% 0;
   image-rendering: -webkit-optimize-contrast;
 }
 #cards_landscape_wrap-2 .card-flyer:hover .image-box img{
@@ -138,6 +139,24 @@ h2 {
   width: 35%;
   height: 1px;
 }
+
+#main-footer {
+  margin-top: -50px;
+}
+
+#year{
+  font-family: 'Roboto Black', sans-serif;
+  font-size: 0.65rem;
+  margin-left: 3px;
+}
+
+.own-cursive {
+  font-family: 'Kaushan Script', cursive;
+}
+
+
+
+/* STYLES FOR BIGGER DEVICES */
 
 @media (min-width: 425px) {
    
