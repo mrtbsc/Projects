@@ -72,7 +72,7 @@
   letter-spacing: 1px;
   color: #000000;
 }
-#cards_landscape_wrap-2 .card-flyer .text-box h6{
+#cards_landscape_wrap-2 .card-flyer .text-box h6 {
   margin-top: 0px;
   margin-bottom: 4px; 
   font-size: 18px;
@@ -119,14 +119,15 @@ nav {
   background-color: #A9D18E;
   margin: 0.6rem;
   letter-spacing: 1px;
+  border-radius: 30px;
 }
 
 #intro p { 
   width: 100%;
-  font-size: .75rem; 
+  font-size: .85rem;
   }
 
-#greeting { font-size: 1.5em; }
+#greeting { font-size: 1.2em; }
 
 
 h2 {
@@ -208,3 +209,40 @@ h2 {
   }
 
 }
+
+/* MODALS */
+
+/* test modal */
+
+ /* .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+} */
+
+.modal-header {
+  border-bottom: 0;
+  padding-bottom :0;
+}
+
+.modal-body h6 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #7d9c69;
+}
+
+.modal-body .half-divider {
+  height: .3px;
+}
+
+.modal-body .own-divider {
+  font-size: 1.25rem;
+}
+

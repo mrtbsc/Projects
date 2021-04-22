@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projectets</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">   
@@ -17,9 +17,15 @@
     <nav class="navbar navbar-expand-sm bg-sm-dark">
         <div class="container">
             <div class="ml-auto d-flex">
-                <i class="fab fa-linkedin align-self-center px-1"></i>
-                <i class="fab fa-github align-self-center px-1"></i>
-                <a class="navbar-brand text-dark" href="#"><h1 class="mb-0">Marta Bosch</h1></a>
+                <a class=" align-self-center px-1 text-dark" href="https://www.linkedin.com/in/marta-bosch-ramon/?locale=en_US" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="align-self-center px-1 text-dark" href="https://github.com/mrtbsc" target="_blank">    
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="navbar-brand text-dark" href="#">
+                    <h1 class="mb-0">Marta Bosch</h1>
+                </a>
             </div>
             <!-- <ul class="navbar-nav">
                 <li class="nav-item">
@@ -36,13 +42,71 @@
     </nav>
 
     <!------------ INTRO -------------->
-    <section id="intro" class="pt-1 pb-3 py-sm-5 rounded m-sm-0">
+    <section id="intro" class="px-2 py-3 py-sm-5 m-sm-0">
         <div class="container-fluid">
             <p class="m-auto text-center">
                 <span id="greeting">Hello!</span> I am an industrial engineer and a selftaught <span class="text-white">developer</span>, who is currently studying <span class="text-white">web development</span>. Keep scrolling to see my exercises on the matter. Who knows, maybe we end up collaborating 😊
             </p>
         </div>
     </section>
+
+    <!-- modal test  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-light px-3">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img class="img-fluid mb-4" src="./images/BlogApp.PNG" alt="" />
+                            <img class="img-fluid" src="./images/BlogApp2.PNG" alt="" />
+                        </div>
+                        <div class="col-sm d-flex flex-column justify-content-around">
+                            <div class=" text-center mb-2">
+                                <h6>Blog App</h6>
+                                <p>My first (express) app connected to an online database (MongoDB Atlas). It implements user authentication and authorization, as well as basic security.</p>
+                            </div>
+
+                            <div class="d-flex justify-content-center align-items-center mb-4 text-dark">
+                                <span>tech used </span>
+
+                                <i class="fab fa-node-js mx-1"></i>
+                                <i class="fab fa-bootstrap mx-1"></i>
+                                <i class="fab fa-js-square mx-1"></i>
+                                <i class="fab fa-css3-alt mx-1"></i>
+                                <i class="fab fa-html5 mx-1"></i>
+                            </div>
+
+                            <h2 id="inspiration-divider" class="own-divider row align-items-center px-sm-0 px-4 mb-3">
+                                <span class="col half-divider bg-dark mx-3"></span>
+                                <div class="col text-dark">Inspiration</div>
+                                <span class="col half-divider bg-dark mx-3"></span>
+                            </h2>
+
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, saepe. </p>
+
+                            <div class="project-links m-auto">
+                                <a class="align-self-center px-1 btn rounded-pill btn-outline-dark px-2 mx-2" href="https://salty-plains-35347.herokuapp.com/" target="_blank">    
+                                    see page
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                                <a class="align-self-center px-1 btn rounded-pill btn-outline-dark px-2 mx-2" href="https://github.com/mrtbsc" target="_blank">    
+                                    see code
+                                    <i class="fab fa-github-alt"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!------------ PROJECTS -------------->
 
@@ -55,15 +119,17 @@
                     <div class="col text-dark">Projects</div>
                     <span class="col half-divider bg-dark mx-2"></span>
                 </h2>
+
+                <!------------ PROJECTS' CARDS  ------------>
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <a href="https://salty-plains-35347.herokuapp.com/" target="_blank">
+                        <a href="" data-toggle="modal" data-target="#exampleModal"><!-- <a href="https://salty-plains-35347.herokuapp.com/" target="_blank"> -->
                             <div class="card-flyer">
                                 <div class="text-box">
                                     <div class="image-box">
                                         <img src="./images/BlogApp.PNG" alt="" />
                                     </div>
-                                    <div class="text-container">
+                                    <div class="text-container text-center">
                                         <h6>Blog App</h6>
                                         <p>First app with backend & frontend</p>
                                     </div>
@@ -185,14 +251,17 @@
                         </a>
                     </div>
                 </div>
+
+                <!------------ PROJECTS' MODALS  ------------>
+
+
             </div>
     </section>
     </div>
 
 
     
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
