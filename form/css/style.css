@@ -6,10 +6,11 @@ body {
 input[type=text], select, textarea {
     background-color: #ffeeba;
     font-family: 'Montserrat', sans-serif;
+    margin-left: 5px;;
 }
 legend {
     color: rgb(135, 130, 127);
-    font-size: 18px; 
+    font-size: 1.5rem;; 
     font-weight: bold;
 }
 fieldset { 
@@ -57,6 +58,10 @@ img {
     margin-top: 8px; 
     margin-bottom: 4px;
 }
+
+#section-other-nos {
+    margin-top: 5px;
+} 
 
 #other-nos {
     display: inline-block;

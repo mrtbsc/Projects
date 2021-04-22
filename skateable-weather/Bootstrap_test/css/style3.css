@@ -30,8 +30,8 @@
         .bg-grey {
             background-color: rgb(207, 205, 205);
         }
-        .bg-yellow {
-            background-color: rgb(246, 239, 160);
+        .bg-blue {
+            background-color: lightblue;
         }
 
         .card {
@@ -95,7 +95,7 @@
         background-color: inherit;
     }
 
-    .card, .card-body, .card-hour {
+    /* .card, .card-body, .card-img-overlay, .card-hour {
         flex-direction: row;
         align-items: center;
         box-sizing: border-box;
@@ -104,10 +104,54 @@
         padding-right: 2px;
 
         font-size: 0.75rem;
+    } */
+
+    .card {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+        font-size: .75rem;
+    }
+
+    .card-img-overlay {
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+
+    .card-img-overlay h5 {
+        font-size: 0.75rem;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    #yesterday h5 {
+        font-size: 0.6rem;;
+    }
+
+    .sun {
+        background-image: url("../images/01d.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+    }
+
+    .cloud {
+        background-image: url("../images/04d.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        width: 55px;
+        height: 55px;
+
+        margin-left: 4px;
     }
 
     .card-body h5 {
-        font-size: 0.75rem;
+        font-size: 0.6rem;
     }
 
     .img-fluid {
