@@ -17,10 +17,16 @@
     <nav class="navbar navbar-expand-sm bg-sm-dark">
         <div class="container">
             <div class="ml-auto d-flex">
-                <i class="fab fa-linkedin align-self-center px-1"></i>
-                <i class="fab fa-github align-self-center px-1"></i>
-                <a class="navbar-brand text-dark" href="#"><h1 class="mb-0">Marta Bosch</h1></a>
-            </div>
+                <a class=" align-self-center px-1 text-dark" href="https://www.linkedin.com/in/marta-bosch-ramon/?locale=en_US" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="align-self-center px-1 text-dark" href="https://github.com/mrtbsc" target="_blank">    
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="navbar-brand text-dark" href="#">
+                    <h1 class="mb-0">Marta Bosch</h1>
+                </a>
+           </div>
             <!-- <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Experience & Education</a>
@@ -105,7 +111,7 @@
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <a href="" target="_blank">
+                        <a href="" data-toggle="modal" data-target="#exampleModal">
                             <div class="card-flyer">
                                 <div class="text-box">
                                     <div class="image-box">
@@ -121,7 +127,7 @@
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <a href="" target="_blank">
+                        <a href="https://mrtbsc.github.io/Projects/form-bootstrap/" target="_blank">
                             <div class="card-flyer">
                                 <div class="text-box">
                                     <div class="image-box">
@@ -189,6 +195,44 @@
     </section>
     </div>
 
+    <!-- TEMPORAL MODAL -->
+    <!-- modal test  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-light px-3">
+                <div class="modal-header border-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="cards_landscape_wrap-2">
+                        <div class="container pt-2">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="https://salty-plains-35347.herokuapp.com/" target="_blank">
+                                        <div class="card-flyer">
+                                            <div class="text-box">
+                                                <div class="image-box">
+                                                    <img src="./images/BlogApp.PNG" alt="" />
+                                                </div>
+                                                <div class="text-container">
+                                                    <h6>Blog App</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+
+            </div>
+        </div>
+    </div>
 
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
